@@ -1,0 +1,166 @@
+[
+    {
+    "u_expr": "2 - 4*x1**4",
+    "f_expr": "48*x1**2",
+    "g_value_expr": "2 - 4*x1**4",
+    "g_flux_expr": "0",
+    "u_rpn": [
+      "const",
+      "const",
+      "x1",
+      "^4",
+      "*",
+      "+"
+    ],
+    "f_rpn": [
+      "const",
+      "x1",
+      "^2",
+      "*"
+    ],
+    "g_value_rpn": [
+      "const",
+      "const",
+      "x1",
+      "^4",
+      "*",
+      "+"
+    ],
+    "g_flux_rpn": [
+      "const"
+    ],
+    "input": "Type: Poisson | RHS: const x1 ^2 * | Cauchy: x2=0.0 const const x1 ^4 * + ||| const | Solution: ||",
+    "target": "const const x1 ^4 * +",
+    "full": "Type: Poisson | RHS: const x1 ^2 * | Cauchy: x2=0.0 const const x1 ^4 * + ||| const | Solution: || const const x1 ^4 * +",
+    "pde_type": "Poisson",
+    "boundary_type": "Cauchy",
+    "boundary_face": "x2=0.0"
+  },
+  {
+    "u_expr": "-x0**2*x1 + x0*x1*x2",
+    "f_expr": "2*x1",
+    "g_value_expr": "-x0**2*x1",
+    "g_flux_expr": "-x0*x1",
+    "u_rpn": [
+      "const",
+      "x1",
+      "*",
+      "x0",
+      "^2",
+      "*",
+      "x0",
+      "x1",
+      "*",
+      "x2",
+      "*",
+      "+"
+    ],
+    "f_rpn": [
+      "const",
+      "x1",
+      "*"
+    ],
+    "g_value_rpn": [
+      "const",
+      "x1",
+      "*",
+      "x0",
+      "^2",
+      "*"
+    ],
+    "g_flux_rpn": [
+      "const",
+      "x0",
+      "*",
+      "x1",
+      "*"
+    ],
+    "input": "Type: Poisson | RHS: const x1 * | Cauchy: x2=0.0 const x1 * x0 ^2 * ||| const x0 * x1 * | Solution: ||",
+    "target": "const x1 * x0 ^2 * x0 x1 * x2 * +",
+    "full": "Type: Poisson | RHS: const x1 * | Cauchy: x2=0.0 const x1 * x0 ^2 * ||| const x0 * x1 * | Solution: || const x1 * x0 ^2 * x0 x1 * x2 * +",
+    "pde_type": "Poisson",
+    "boundary_type": "Cauchy",
+    "boundary_face": "x2=0.0"
+  },
+  {
+    "u_expr": "3*x1**3 + 2",
+    "f_expr": "-18*x1",
+    "g_value_expr": "2",
+    "g_flux_expr": "0",
+    "u_rpn": [
+      "const",
+      "const",
+      "x1",
+      "^3",
+      "*",
+      "+"
+    ],
+    "f_rpn": [
+      "const",
+      "x1",
+      "*"
+    ],
+    "g_value_rpn": [
+      "const"
+    ],
+    "g_flux_rpn": [
+      "const"
+    ],
+    "input": "Type: Poisson | RHS: const x1 * | Cauchy: x1=0.0 const ||| const | Solution: ||",
+    "target": "const const x1 ^3 * +",
+    "full": "Type: Poisson | RHS: const x1 * | Cauchy: x1=0.0 const ||| const | Solution: || const const x1 ^3 * +",
+    "pde_type": "Poisson",
+    "boundary_type": "Cauchy",
+    "boundary_face": "x1=0.0"
+  },
+  {
+    "u_expr": "sin(x1) + cos(x2**2)",
+    "f_expr": "4*x2**2*cos(x2**2) + sin(x1) + 2*sin(x2**2)",
+    "g_value_expr": "sin(x1) + cos(x2**2)",
+    "g_flux_expr": "0",
+    "u_rpn": [
+      "x2",
+      "^2",
+      "cos",
+      "x1",
+      "sin",
+      "+"
+    ],
+    "f_rpn": [
+      "const",
+      "x2",
+      "^2",
+      "sin",
+      "*",
+      "const",
+      "x2",
+      "^2",
+      "*",
+      "x2",
+      "^2",
+      "cos",
+      "*",
+      "+",
+      "x1",
+      "sin",
+      "+"
+    ],
+    "g_value_rpn": [
+      "x2",
+      "^2",
+      "cos",
+      "x1",
+      "sin",
+      "+"
+    ],
+    "g_flux_rpn": [
+      "const"
+    ],
+    "input": "Type: Poisson | RHS: const x2 ^2 sin * const x2 ^2 * x2 ^2 cos * + x1 sin + | Cauchy: x0=0.0 x2 ^2 cos x1 sin + ||| const | Solution: ||",
+    "target": "x2 ^2 cos x1 sin +",
+    "full": "Type: Poisson | RHS: const x2 ^2 sin * const x2 ^2 * x2 ^2 cos * + x1 sin + | Cauchy: x0=0.0 x2 ^2 cos x1 sin + ||| const | Solution: || x2 ^2 cos x1 sin +",
+    "pde_type": "Poisson",
+    "boundary_type": "Cauchy",
+    "boundary_face": "x0=0.0"
+  }
+]
