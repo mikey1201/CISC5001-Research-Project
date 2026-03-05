@@ -1,0 +1,6 @@
+/dev/llmfex/.venv
+
+/dev/llmfex/data
+/dev/llmfex/finetuned_model
+
+/dev/llmfex/data_generation/__pycache__
