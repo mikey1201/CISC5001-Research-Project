@@ -1,6 +1,11 @@
 /dev/llmfex/.venv
 
 /dev/llmfex/data
-/dev/llmfex/finetuned_model
+/dev/llmfex/.old
 
-/dev/llmfex/data_generation/__pycache__
+/*/*/*/__pycache__
+/dev/llmfex/m_*
+
+/dev/llmfex/inference*
+/dev/llmfex/pde*
+/dev/llmfex/sample*

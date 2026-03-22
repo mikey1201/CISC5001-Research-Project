@@ -1,0 +1,32 @@
+model_name: "meta-llama/Llama-3.2-3B"
+quantization:
+  load_in_4bit: True
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: bfloat16
+  bnb_4bit_use_double_quant: True
+precision:
+  bf16: True
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.1
+  target_modules: ["q_proj","k_proj","v_proj","o_proj"]
+training:
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 8
+  effective_batch_size: 32
+  learning_rate: 2e-4
+  weight_decay: 0.01
+  lr_scheduler: "cosine"
+  warmup_ratio: 0.05
+  num_train_epochs: 3
+  max_prompt_length: 256
+  max_target_length: 64
+checkpointing:
+  save_total_limit: 3
+logging:
+  logging_steps: 50
+  eval_steps: same as save_steps or a reasonable multiple
+dataloader:
+  num_workers: 6
+  pin_memory: True
