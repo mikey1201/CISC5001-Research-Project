@@ -73,17 +73,23 @@ def sample_exponent() -> int:
     """
     Sample a random exponent for power operations.
     
-    Returns 2 with probability 2/3, and 3 with probability 1/3.
-    This favors quadratic terms which are common in PDEs.
+    Returns an exponent from 2 to 6 with weighted probabilities.
+    Lower powers are still more common (matching PDE physics), but
+    higher powers now have sufficient representation for LLM training.
+    
+    Weights:
+    - ^2: 30% (quadratic terms are most common in PDEs)
+    - ^3: 25% (cubic terms also common)
+    - ^4: 18% (quartic terms from double-differentiation)
+    - ^5: 15% (moderate representation)
+    - ^6: 12% (sufficient for training coverage)
     
     Returns:
-        int: Either 2 or 3
+        int: Exponent from 2 to 6
     """
-    r = random.random()
-    if r < 2/3:
-        return 2
-    else:
-        return 3
+    weights = [0.30, 0.25, 0.18, 0.15, 0.12]  # ^2, ^3, ^4, ^5, ^6
+    exponents = [2, 3, 4, 5, 6]
+    return random.choices(exponents, weights=weights)[0]
 
 
 def get_leaf(n: int) -> sp.Symbol:

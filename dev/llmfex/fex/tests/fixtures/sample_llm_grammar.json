@@ -1,0 +1,20 @@
+{
+  "grammar_type": "llm_generated",
+  "version": "1.0",
+  "source": "llm_finetuned",
+  "unary_operators": [
+    {"name": "sin", "description": "sine function"},
+    {"name": "cos", "description": "cosine function"},
+    {"name": "exp", "description": "exponential function"},
+    {"name": "square", "description": "x squared"}
+  ],
+  "binary_operators": [
+    {"name": "add", "description": "addition"},
+    {"name": "mul", "description": "multiplication"}
+  ],
+  "metadata": {
+    "pde_type": "Poisson",
+    "generated_at": "2024-01-15T10:00:00Z",
+    "model": "fine-tuned-llm-v1"
+  }
+}

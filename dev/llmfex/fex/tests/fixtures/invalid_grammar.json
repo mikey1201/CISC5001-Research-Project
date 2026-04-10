@@ -1,0 +1,16 @@
+{
+  "grammar_type": "llm_generated",
+  "version": "1.0",
+  "unary_operators": [
+    {"name": "sin"},
+    {"name": "unknown_operator"},
+    {"name": "another_unknown"}
+  ],
+  "binary_operators": [
+    {"name": "add"},
+    {"name": "invalid_binary_op"}
+  ],
+  "metadata": {
+    "description": "Grammar with unknown operators for testing validation"
+  }
+}

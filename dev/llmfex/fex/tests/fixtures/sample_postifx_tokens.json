@@ -1,0 +1,8 @@
+{
+  "format": "postfix_tokens",
+  "tokens": ["x", "x", "add", "sin", "exp", "x", "mul", "add", "cos", "sin"],
+  "metadata": {
+    "pde_type": "Poisson",
+    "description": "Sample postfix token sequence from LLM"
+  }
+}

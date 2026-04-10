@@ -9,3 +9,8 @@
 /dev/llmfex/inference*
 /dev/llmfex/pde*
 /dev/llmfex/sample*
+
+/dev/llmfex/main/benchmark_results
+/dev/llmfex/main/llm_grammars
+/dev/llmfex/main/sample_grammars
+/dev/llmfex/main/*.json*
